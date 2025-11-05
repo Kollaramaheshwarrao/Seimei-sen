@@ -1,11 +1,15 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.life_countdown_widget">
+    
+    <uses-permission android:name="android.permission.INTERNET" />
+    
     <application
         android:label="Life Countdown Widget"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         
         <activity
-            android:name=".MainActivity"
+            android:name="com.example.life_countdown_widget.MainActivity"
             android:exported="true"
             android:launchMode="singleTop"
             android:theme="@style/LaunchTheme"
@@ -24,8 +28,9 @@
         </activity>
         
         <!-- Widget Provider -->
-        <receiver android:name=".LifeCountdownWidgetProvider"
-            android:exported="true">
+        <receiver android:name="com.example.life_countdown_widget.LifeCountdownWidgetProvider"
+            android:exported="true"
+            android:label="Life Countdown Widget">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
             </intent-filter>
@@ -37,6 +42,4 @@
             android:name="flutterEmbedding"
             android:value="2" />
     </application>
-    
-    <uses-permission android:name="android.permission.INTERNET" />
 </manifest>
