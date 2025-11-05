@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life Countdown Widget</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#667eea">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+</head>
+<body>
+    <div class="widget-container" id="widget">
+        <div class="header">
+            <h1>Your Life Clock ⏳</h1>
+            <button class="theme-toggle" id="themeToggle">🌙</button>
+        </div>
+        
+        <div class="countdown-display">
+            <div class="time-unit">
+                <span class="value" id="years">0</span>
+                <span class="label">Years</span>
+            </div>
+            <div class="time-unit">
+                <span class="value" id="months">0</span>
+                <span class="label">Months</span>
+            </div>
+            <div class="time-unit">
+                <span class="value" id="days">0</span>
+                <span class="label">Days</span>
+            </div>
+            <div class="time-unit">
+                <span class="value" id="hours">0</span>
+                <span class="label">Hours</span>
+            </div>
+            <div class="time-unit">
+                <span class="value" id="minutes">0</span>
+                <span class="label">Minutes</span>
+            </div>
+            <div class="time-unit">
+                <span class="value" id="seconds">0</span>
+                <span class="label">Seconds</span>
+            </div>
+        </div>
+
+        <div class="progress-section">
+            <div class="progress-circle">
+                <svg class="progress-ring" width="120" height="120">
+                    <circle class="progress-ring-circle" cx="60" cy="60" r="54"></circle>
+                </svg>
+                <div class="progress-text">
+                    <span id="progressPercent">0%</span>
+                    <small>Lived</small>
+                </div>
+            </div>
+        </div>
+
+        <div class="motivation-section">
+            <p class="quote" id="motivationQuote">Make every second legendary.</p>
+        </div>
+
+        <div class="toggle-section">
+            <button class="toggle-btn" id="toggleMode">Show Time Lived</button>
+        </div>
+    </div>
+
+    <div class="motivation-screen" id="motivationScreen">
+        <div class="screen-content">
+            <button class="close-btn" id="closeScreen">×</button>
+            <h2>Moments That Matter</h2>
+            <div class="current-info">
+                <p id="currentDateTime"></p>
+                <div class="life-summary">
+                    <h3>Life Lived Summary</h3>
+                    <p id="lifeSummary"></p>
+                </div>
+                <div class="daily-quote">
+                    <h3>Daily Reflection</h3>
+                    <p id="dailyQuote">Time is your most valuable asset.</p>
+                </div>
+                <button class="action-btn" id="startSomething">Start Something Today</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="settings-panel" id="settingsPanel">
+        <h3>Settings</h3>
+        <div class="setting-group">
+            <label for="birthDate">Birth Date:</label>
+            <input type="date" id="birthDate">
+        </div>
+        <div class="setting-group">
+            <label for="lifeExpectancy">Life Expectancy:</label>
+            <input type="number" id="lifeExpectancy" value="80" min="1" max="120">
+        </div>
+        <button class="save-btn" id="saveSettings">Save</button>
+    </div>
+
+    <button class="settings-btn" id="settingsBtn">⚙️</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
