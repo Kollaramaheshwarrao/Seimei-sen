@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:glance/glance.dart';
-import 'life_widget.dart';
 import 'theme.dart';
 import 'quote_service.dart';
 
